@@ -1,0 +1,70 @@
+{
+  "name": "bi-widgets",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/bi-widgets.umd.js",
+  "module": "./dist/bi-widgets.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/bi-widgets.es.js",
+      "require": "./dist/bi-widgets.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "build": "tsc && vite build && pnpm run build:css",
+    "test": "vitest",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.2.0",
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cmdk": "1.0.0",
+    "highcharts": "^11.4.8",
+    "highcharts-react-official": "^3.2.1",
+    "lucide-react": "^0.453.0",
+    "react-hook-form": "^7.53.1",
+    "react-icons": "^5.3.0",
+    "react-select": "^5.8.1",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.38.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^4.9.5",
+    "vite": "^4.3.0",
+    "vite-plugin-dts": "^2.3.0",
+    "vitest": "^0.30.1"
+  },
+  "author": "Amol Godse",
+  "license": "MIT"
+}
