@@ -1,5 +1,5 @@
-import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
+import * as React from "react";
 declare const buttonVariants: (props?: ({
     variant?: "link" | "outline" | "default" | "destructive" | "secondary" | "ghost" | null | undefined;
     size?: "default" | "icon" | "sm" | "lg" | null | undefined;
